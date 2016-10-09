@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script src="jquery/jquery-1.7.1.min.js" ></script>
+
+
+<style type="text/css">
+
+ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, textarea, p, th, td {
+margin: 0;
+padding: 0;
+}
+  
+
+
+  .vanclHead {
+  	width: 100%;
+  	height: auto;
+  }
+
+  body {
+  	font-size: 12px;
+  	font-family: "宋体"
+  	color:#333;
+  }
+  .headerTopAreaBox {
+  	width: 100%;
+  	height: 32px;
+  	background: #fff;
+  	border-bottom:  1px; solid #ccc;
+  	color: #808080;
+  }
+  .headerTopArea {
+  	width: 100%;
+  	height: 31px;
+  	background: #f7f7f7;
+  }
+.headerTopArea  .headerTop {
+	width: 980px;
+	height: 31px;
+	line-height: 32px;
+	margin: 0 auto;
+	background: #f7f7f7;
+}
+.headerTopArea .headerTopRight {
+	width: 420px;
+	float: right;
+	position: relative;
+	z-index: 9000;
+}
+
+.headerTopArea #myVancl, 
+.headerTopArea #vanclMap, 
+.headerTopArea #vanclHelp, 
+.headerTopArea #vanclCustomer {
+width: 70px;
+height: 18px;
+line-height: 18px;
+margin: 7px 0px 0 0px;
+float: left;
+display: inline;
+position: relative;
+z-index: 1000;
+cursor: pointer;
+}
+.headerTopArea .mapDropTitle {
+background-position: 0px 0px;
+display: block;
+}
+.headerTopArea .mapDropTitle, .headerTopArea .hover .mapDropTitle {
+background: url(vanimg/notice.png) no-repeat scroll 0px 0px;
+width: 55px;
+padding-left: 26px;
+text-align: left;
+}
+.headerTopArea .payattention {
+  float: right;
+
+}
+
+.payattention em {
+background-position: 0px -117px;
+width: 47px;
+height: 22px;
+display: none;
+border: 1px solid red;
+}
+.vweixinbox {
+float: left;
+position: relative;
+}
+
+
+.vweixinbox .vweixinTip {
+position: absolute;
+width: 148px;
+height: 169px;
+right: 0px;
+top: 30px;
+border: 1px solid #e5e5e5;
+background: url(http://i2.vanclimg.com/header/20130116/weixin.png) no-repeat;
+overflow: hidden;
+display: none;}
+
+.vweixinbox .vweixin {
+background-position: -24px -23px;
+float: left;
+margin-left: 10px;
+display: inline;
+cursor: pointer;
+height: 21px;
+width: 20px;
+}
+
+.payattention a.vanclweibo{
+background-position: -48px -23px;
+width: 20px;
+height: 25px;
+float: left;
+}
+
+.headerTopArea .headerTopLeft {
+	min-width: 240px;
+	float: right;
+}
+.headerTopArea .loginArea { float: left; }
+.headerTopArea .recommendArea {
+	margin: 0px 0 0 8px;
+	float: left;
+	display: inline;
+}
+.headerTopArea .recommendArea a {
+	padding-right: 9px;
+}
+.headerTopAreaBox a{
+	color: #808080;
+}
+.blank0 {
+	display: block;
+	width: 100%;
+	height: 0px;
+	line-height: 0px;
+	font-size: 0px;
+	clear: both;
+	overflow: hidden;
+}
+.vanclLogoSearch {
+	width: 980px;
+	height: 62px;
+	margin: 20px auto 25px;
+}
+
+
+h1 ,h2,h3 ,h4,h5 ,h6 {
+	font-size: 100%;
+	font-weight: normal;
+	}
+
+a:link, a:visited {
+	color: #333;
+	text-decoration: none;
+}
+
+
+.fl{ float: left; }
+.vanclLogo {
+	width: 166px;
+	height: 47px;
+	padding: 0px 0px 0px 33px;
+}
+.vanclLogo a {
+	display: block;
+	width: 166px;
+	height: 47px;
+	background:  url(vanimg/logo.png) no-repeat scroll 0px -59px;
+	text-indent:-9999px;
+}
+ h1 {
+ 	display: block;
+ 	-webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+ }
+.fr{float: right;}
+
+.vanclSearch {
+	width: 438px;
+	padding-top: 8PX;
+}
+
+.searchTab {
+	height: 29px;
+}
+
+.searchTab .fl {
+	float: left;
+}
+.searchTab .Enter {
+	width: 249px;
+	height: 27px;
+	padding: 0px 5px;
+	line-height: 27px;
+	border: 1px solid #c9caca;
+}
+
+.searchTab .btn {
+width: 49px;
+height: 29px;
+border: none;
+cursor: pointer;
+
+background: url(vanimg/logo.png) no-repeat scroll -100px 0px;
+}
+
+.searchTab .active {
+	width: 105px;
+	height: 27px;
+	border: 1px solid #c1383e;
+	background: url(vanimg/logo.png) no-repeat scroll -154px 0;
+	position:relative;
+	z-index: 10;
+	float: right;
+}
+.searchTab .hover {
+	width: 105px;
+	height: 27px;
+	border: 1px solid #c1383e;
+	border-bottom: 1px solid #ffffff;
+	background: url(vanimg/logo.png) no-repeat scroll -153px -29px;
+	position:relative;
+	z-index: 100;
+	float: right;
+}
+.searchTab .active a.cartab:link, 
+.searchTab .active a.cartab:visited, 
+.searchTab .active a.cartab:hover, 
+.searchTab .active a.cartab:active {
+color: #ffffff;
+}
+
+.searchTab .hover a.cartab:link, 
+.searchTab .hover a.cartab:visited, 
+.searchTab .hover a.cartab:hover, 
+.searchTab .hover a.cartab:active {
+color: #b81c22;
+}
+
+.searchTab .active a.cartab {
+         display: block;
+         padding-left: 29px;
+         padding-top: 6px;
+         font-size: 12px;
+         color: #ffffff;
+         }
+
+
+.searchTab .hover p a {
+         display: block;
+         padding-left: 29px;
+         padding-top: 6px;
+         font-size: 12px;
+         color: #ffffff;
+         }
+ .searchTab .hover .bottomlines{
+    background: #ffffff;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top: 25px;
+    z-index: 10;
+ }
+.BuycarTab {
+	width: 315px;
+	height: auto;
+	padding: 5px;
+	border: 1px solid #b81c22;
+	position: absolute;
+	right: -1px;
+	top: 27px;
+	background: #ffffff;
+	display: none;
+
+	
+}
+.hotWord {
+	width: 440px;
+	padding-top: 5px;
+	line-height: 18px;
+	color: #727171;
+	padding-left: 15px;
+}
+
+.hotWord p a:link { color: #727171; margin: 0 5px 0 0;}
+.hotWord P a {
+	padding-left: 5px;
+}
+a:link { text-decoration: none; }
+.vanclNav {
+	width: 980px;
+	height: 49px;
+	margin: 0px auto;
+}
+.vanclNav .allProduct {
+	width: 98px;
+	height: 49px;
+	color: #333;
+	position: relative;
+}
+
+.vanclNav .allProduct a {
+display: block;
+width: 100%;
+height: 100%;
+line-height: 49px;
+text-align: center;
+color: #333;
+font-size: 17px;
+font-family: "Microsoft Yahei";
+}
+.vanclNav .fl{
+	float: left;
+}
+
+#V_Category{
+	position: relative;
+	z-index: 1000;
+}
+.vanclNav ul {
+	margin: 0px;
+	padding: 0px;
+	width: 882px;
+}
+.fr {float: right;}
+
+.vanclNav ul li {
+	float: left;
+	width: 98px;
+	position: relative;
+}
+
+li{list-style: none;}
+.vanclNav ul li a:link {
+	color: #333;
+}
+.vanclNav ul li a{
+	display: block;
+	width: 98px;
+	height: 49px;
+	line-height: 49px;
+	font-size: 17px;
+	text-align: center;
+	font-family: "Microsoft Yahei";
+
+}
+.NavLine {
+	display: block;
+	height: 18px;
+	width: 1px;
+	border-right: solid  1px #888;
+	position: absolute;
+	right: 1px;
+	top:16px;
+	overflow: hidden;
+}
+.vanclCon {
+	width: 980px;
+	height: auto;
+	margin: 0px auto;
+	
+}
+
+.vanclFoot {
+	overflow: hidden;
+	width: 980px;
+	height: 282;
+	margin: 0px auto;
+	border: 1px solid #e0e0e1;
+	font-family: "Microsoft Yahei";
+	margin-bottom: 25px;
+}
+.vanclCustomer {
+	margin: 33px 0px 23px;
+	overflow: hidden;
+}
+.vanclCustomer ul{
+	margin: 0;
+	padding: 0;
+}
+.vanclCustomer ul li {
+	width: 320px;
+	height: 138px;
+	border-right: 1px solid #e0e0e1;
+}
+
+.vanclCustomer ul li p {
+text-align: center;
+font-size: 14px;
+color: #727171;
+line-height: 26px;
+}
+.vanclCustomer ul li.twocode p img {
+margin-bottom: 10px;
+}
+.vanclCustomer ul li p img {
+display: block;
+margin: 0px auto;
+}
+.vanclCustomer ul li p.onlineCustomer {
+margin: 15px auto 30px;
+}
+.vanclCustomer ul li p.onlineTime {
+margin: 0px auto;
+width: 156px;
+height: 32px;
+text-align: center;
+line-height: 32px;
+font-size: 14px;
+background: #b81c22;
+color: #ffffff;
+}
+.vanclOthers {
+	height: 46px;
+	padding: 17px 0px 0px 0px;
+	background: #f8f8f8;
+	width: 95%;
+	margin: 17px auto;
+}
+
+.vanclOthers ul {
+   margin: 0px;
+   padding: 0px;
+}
+.vanclOthers ul li {
+	float: left;
+	width: 153px;
+	text-align: center;
+	line-height: 26px;
+	border-right: 1px solid #dadadb;
+}
+
+.vanclFoot ul li {
+	float: left;
+}
+.publicfooterclear {
+	zoom:1;
+}
+.footBottom {
+	width: 100%;
+	height: auto;
+	margin: 0px auto;
+	border-top:1px solid #3e3a39;
+}
+.footBottomTab {
+	width: 1200px;
+	height: auto;
+	margin:10px auto;
+}
+.footBottomTab p {
+	text-align: center;
+	line-height: 25px;
+	color: #3e3a39;
+	font-family: "Microsoft Yahei";
+}
+.blank20 {
+	display: block;
+	width: 100%;
+	height: 20px;
+	line-height: 0px;
+	font-size: 0px;
+	clear: both;
+	overflow: hidden;
+}
+.subFooter {
+	width: 980px;
+	margin: 0px auto 25px;
+	text-align: center;
+}
+ .subFooter .redLogo:link, .subFooter .redLogo:visited, .subFooter .redLogo:hover {
+background: url("vanimg/foot.png") no-repeat scroll 0 -581px  transparent;
+display: inline-block;
+height: 42px;
+width: 113px;
+}
+
+.subFooter .vanclMsg:link, .subFooter .vanclMsg:visited, .subFooter .vanclMsg:hover {
+background: url("vanimg/foot.png") no-repeat scroll -97px -675px transparent;
+display: inline-block;
+height: 42px;
+width: 101px;
+}
+
+.subFooter .wsjyBzzx:link, .subFooter .wsjyBzzx:visited, .subFooter .wsjyBzzx:hover {
+background: url("vanimg/foot.png") no-repeat scroll 0 -675px transparent;
+display: inline-block;
+height: 42px;
+width: 96px;
+}
+
+#footerArea .vanclqingNian:link, #footerArea .vanclqingNian:visited, #footerArea .vanclqingNian:hover {
+background: url("vanimg/foot.png") no-repeat scroll -202px -675px transparent;
+display: inline-block;
+height: 42px;
+width: 42px;
+}
+.subFooter .costumeOrg {
+background: url("vanimg/foot.png") no-repeat scroll 0 -629px transparent;
+display: inline-block;
+height: 45px;
+width: 156px;
+}
+.BayWindow {
+	width: 73px;
+	height: 205px;
+	border: 1px solid #b81b22;
+	border-bottom: none;
+	margin-bottom: 30px;
+}
+.BayWindow ul li {
+	width: 73px;
+	border-bottom: 1px solid #b81b22;
+}
+.BayWindow ul li.downApp a {
+height: 76px;
+background: url(http://i2.vanclimg.com/cms/20160802/baywindow.png) no-repeat -1px -1px;
+}
+
+.breadNav {
+	height: 22px;
+}
+
+
+#ProductTitleShow  .brandNumArea {
+display: none;
+}
+ #ProductTitleShow  h2{
+ 	float: left;
+	font-size: 18px;
+	font-weight: bold;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#ProductTitleShow .ProductSubnav li{
+	float: left;
+	height: 45px;
+	margin:0 10px 0 0;
+}
+#ProductTitleShow .ProductSubnav li a{
+	font-size: 15px;
+	font-weight: bold;
+	display: inline-block;
+	padding-right: 15px;
+	height: 45px;
+}
+.blank30{
+	display: block;
+	height: 30px;
+}
+.danpinTitleTab{
+	height: 45px;
+	border-bottom: 1px solid #eee;
+}
+
+.danpinArea {
+height: auto;
+margin: 0px auto;
+zoom: 1;
+}
+
+
+.danpin_colLef{
+	width: 600px;
+	height: auto;c
+	float: left;
+}
+.danpinLeft {
+	width: 72px;
+	height: auto;
+	float:left;
+}
+.danpinColCenter {
+	width: 402px;
+	height: auto;
+	float: left;
+	margin-left: 20px;
+}
+
+  #winSelector{
+   	width: 200px;
+   	height: 200px;
+   	background: #eee;
+    opacity: 0.6;
+    position: absolute;
+    display: none;
+   
+  
+   }  
+.bigImg {
+   width: 400PX;
+   height: 400PX;
+   overflow: hidden;
+   border:1px solid #eee;
+   position: relative;
+}
+ .big_zoom {
+
+   	width: 400px;
+   	height: 400px;
+   	overflow: hidden;
+   	margin-left: 20px;
+    background: url(vanimg/0_1big.jpg)  no-repeat;
+   	border: 1px solid ;
+   	position: absolute;
+   	left: 500px;
+   	top: 288px;
+    display: none;
+
+   
+}
+.danpinRight {
+	width: 500px;
+	overflow: hidden;
+	float: left;
+}
+.imageMenu li {
+	margin-top: 10px;
+	width: 72px;
+	height: 72px;
+	border:1px solid #eee;
+}
+.smallImg {
+	width: 72px;
+	float: left;
+	display: inline;
+}
+.smallImg li span {
+    display: inline-block;
+    width: 68px;
+    height: 68px;
+    overflow: hidden;
+   
+
+}
+.imageMenu {
+	width: 72px;
+	float: left;
+}
+.imageMenu li:first-child {
+	margin: 0;
+}
+.form {
+	height: 230px;
+	width: auto;
+}
+.form dt {
+	float: left;
+	clear: left;
+	margin: 10px 0 10px 0;
+	
+
+}
+.form dd {
+	float: left;
+	clear: right;
+	margin: 10px 0 10px 0;
+}
+
+.form  .color li {
+	float: left;
+	width: 85px;
+	height: 35px;
+	border:1px solid #eee;
+	margin-right: 5px;
+
+}
+.form .color .active {
+	
+	border: 1px solid #a10000;
+	
+}
+.form select {
+-webkit-appearance: menulist;
+box-sizing: border-box;
+align-items: center;
+border: 1px solid #eee;
+border-image-source: initial;
+border-image-slice: initial;
+border-image-width: initial;
+border-image-outset: initial;
+border-image-repeat: initial;
+white-space: pre;
+-webkit-rtl-ordering: logical;
+color: black;
+background-color: white;
+cursor: default;
+}
+.form .color li span  {
+	float: left;
+	background: url(vanimg/long.jpg) no-repeat scroll -0px -180px;
+	width: 36px;
+	height: 36px;
+	overflow: hidden;
+}
+.form .color li:first-child span{
+	float: left;
+	background: url(vanimg/long.jpg) no-repeat scroll -0px -72px;
+	width: 36px;
+	height: 36px;
+	overflow: hidden;
+}
+
+.form li p{
+	float: right;
+}
+.form .size {
+	
+	width: 130px;
+	height: 26px;
+}
+.form .size li{
+	float: left;
+	border:1px solid #eee;
+	width: 17px;
+	height: 15px;
+}
+.form .state span{
+	font-weight: bold;
+	margin: 0 10px 0 10px;
+}
+.danpinfixedtitle .button {
+	width: 130px;
+	height: 30px;
+	background-color: #eee;
+	float: left;
+	border:1px solid red;
+	margin-left: 10px;
+}
+.danpinfixedtitle .button span
+{
+margin-left: 39px;
+margin-top: 9px;
+display: block;
+font-size: 14px;
+color: #A50309;
+}
+
+table {
+    border-collapse: collapse;
+   border-spacing: 0;
+}
+
+table[Attributes Style] {
+-webkit-margin-start: auto;
+-webkit-margin-end: auto;
+border-top-width: 0px;
+border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 0px;
+border-spacing: 0px;
+}
+tbody {
+	display: table-row-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+tr{
+	display: table-row;
+	vertical-align: inherit;
+	border-color: inherit;
+}
+
+td, th {
+display: table-cell;
+vertical-align: inherit;
+}
+.itemtagcontentpart img {
+float: left;
+border:0;
+}
+img[Attributes Style] {
+height: 421px;
+width: 1200px;
+}
+.titlePro {
+	margin-bottom: 10px;
+}
+.leftPro{
+	float: left;
+	width: 200px;
+	height: auto;
+	border:1px solid #eee;
+	margin-right: 20px;
+}
+.rightPro {
+	width: 800px;
+	height: auto;
+	float: right;
+
+}
+.leftPro li {
+	width: 230px;
+	height: 230px;
+}
+
+.leftPro li img {
+	display: block;
+    left: -14px;
+    position: relative;
+    width: 160px;
+
+}
+.comments {
+	height: auto;
+	width: 700px;
+	border:1px solid #eee;
+	margin-bottom: 80px;
+}
+.titleComments {
+	height: 50px;
+	width: 700px;
+	border-bottom: 1px solid #eee;
+	}
+.titleComments li{
+	float: left;
+	margin: 10px;
+}
+.titleComments li:last-child{
+	float:right;
+	width: 85px;
+	height: 25px;
+	
+}
+.titleComments li a {
+	text-align: center;
+	display: block;
+	width: 85px;
+	height: 25px;
+	color: #fff;
+	background: #a10000;
+}
+ .contentComments{
+ 	height: 70px;
+ 	width: 700px;
+ 	border-bottom: 1px dotted #eee;
+ }
+.rightPro .leftComments{
+	float: left;
+	width: 600px;
+	
+}
+.rightPro .rightComments{
+	float: right;
+	width: 80px;
+	height: 70px;
+	border-left:1px dotted #eee;
+}
+.rightPro .leftComments .ul{
+	float: left;
+
+}
+.rightPro .leftComments .ur{
+	float: right;
+
+}
+
+.rightPro .question {
+    margin-top: 100px;
+    width: 700px;
+    height: auto;
+    border:1px solid #eee;
+}
+.rightPro .titleQuestion {
+	height: 50px;
+	border-bottom: 1px solid #eee;
+}
+.rightPro .question .Q{
+	width: 700px;
+	height: 50px;
+}
+.rightPro .question .Q p{
+	float: left;
+}
+.rightPro .question .Q p:last-child {
+	float:right;
+}
+.rightPro .titleQuestion li{
+	float: left;
+	width: 120px;
+	height: 25px;
+	margin: 10px;
+}
+.rightPro .titleQuestion li:last-child {
+	float:right;
+	width: 85px;
+	height: 25px;
+	background: #a10000;
+	
+}
+.rightPro .titleQuestion li a{
+	display: block;
+	text-align: center;
+	color: #fff;
+	width: 85px;
+	height: 25px;
+	background: #a10000;
+}
+.titlePro {
+	height: 55px;
+	margin-bottom: 80px;
+}
+.titlePro .titleDown{
+	height: 38px;
+	padding-top: 9px;
+}
+ .hideTitle{
+ 	display: none;
+ 	width: 100%;
+ 	height: 50px;
+ 	border:1px solid #eee;
+ 	position: fixed;
+ 	top:0px;
+ 	left: 0px;
+ 	background: #fff;
+ }
+ .hideTitle h2 {
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 50px;
+}
+.hideTitle ul {
+	float: left;
+	height: 50px;
+	margin-left: 100px;
+}
+ .hideTitle li {
+  float: left;
+  color: #808080;
+  height: 45px;
+  margin: 0 10px 0 0;
+}
+
+ .hideTitle li a {
+font-family: 微软雅黑;
+color: #000;
+font-weight: bold;
+font-size: 15px;
+display: inline-block;
+line-height: 50px;
+}
+ .hideTitle li .select{
+ 	color: #a10000;
+ }
+
+.AddtoCar, .AddtoCar a.cartab {
+width: 134px;
+height: 33px;
+display: block;
+position: relative;
+top: 3px;
+}
+.AddtoCar a.cartab {
+background: url(vanimg/logo.png) no-repeat scroll -147px -285px;
+}
+.sideBarSettabArea {
+	border-top: 1px solid #eee;
+}
+</style>
+
+<script type="text/javascript">
+   $(function(){
+    
+  
+
+   	var change=function(i,direction){
+    
+    	for( i ; i< $('.imageMenu li').length; i++){
+
+      ( function(i){
+   	  
+       $('.imageMenu li').eq(i).on('mouseover',  function(event) {
+     	event.preventDefault();
+         
+     	$('.bigImg img').attr('src', 'vanimg/'+direction+'_'+ i+'small.jpg');
+     	$('.big_zoom').attr('background-image','url(vanimg/'+direction+'_'+i+'big.jpg)'); 
+
+        console.log("cur"+i);
+        console.log("background-image"+$('.big_zoom').attr('background-image'));
+     	
+     }); 
+
+       })(i);
+
+     	console.log("imglength"+$('.imageMenu li').length);
+     	  console.log("for"+i);
+     
+  };
+
+};
+ 
+  change(0,0);
+
+   $('.bigImg').mousemove(function(event) {
+    	/* Act on the event */
+    	  var offset=$(this).offset();
+          var x=event.pageX-offset.left;
+          var y=event.pageY-offset.top;
+
+    	 var top=y-$('#winSelector').height()/2;
+    	 var left=x-$('#winSelector').width()/2;
+          
+
+    	 if(top<0){
+    	 	top=0;
+    	 	
+    	 };
+
+    	  if(left<0)
+    	 {
+    	 	left=0;
+    	 };
+
+    	 if(top>$(this).height()-$('#winSelector').height()){
+
+    	 	top=$(this).height()-$('#winSelector').height();
+    	 
+    	 };
+    	 if(left>$(this).width()-$('#winSelector').width())
+    	 {
+
+          left=$(this).width()-$('#winSelector').width();
+    	 };
+    	 var rateY=top/$(this).height();
+    	 var rateX=left/$(this).width();
+    	 var top1=$('.big_zoom').height()*rateY;
+    	 var left1=$('.big_zoom').width()*rateX;
+
+    	 var pos=top1+"px"+left1+"px";
+
+
+    	
+        $('#winSelector').css({
+        	display: 'block',
+        	top: top+'px',
+        	left:left+'px',
+        });
+
+        $('.big_zoom').css({
+        	display: 'block',
+        	backgroundPosition:-parseInt(2*left1)+'px'+' '+ -parseInt(2*top1)+'px'
+        });
+        console.log("zoom"+x);
+        console.log("rate"+rateX);
+        console.log("big"+top1);
+    }).mouseleave(function(event) {
+    	/* Act on the event */
+    	$('#winSelector').css('display', 'none');
+    	 $('.big_zoom').css('display','none');
+    });
+
+
+
+
+  	  for(var j=0 ;j<$('.form .color li ' ).length; j++){
+
+  	       (function(j){
+  	       	           $('.form .color li ' ).eq(j).click(function(event) {
+  	/* Act on the event */
+
+  	                    $(this).toggleClass('active').siblings().removeClass('active');
+  	                   $('.smallImg li span ').css('background-image', 'url(vanimg/'+j+'_left.jpg)');
+  	                   $('.bigImg img').attr('src', 'vanimg/'+j+'_1small.jpg');
+  	                   $('.big_zoom').css('background-image','url(vanimg/'+j+'_1big.jpg');
+  	                   change(0,j);  
+                        
+                        var info = $(this).text();
+
+  	                   $('.form .state span:first-child ').text( info  );  
+  	                
+                          
+                          console.log('文本替换' + info );
+                       });
+
+  	       })(j);
+
+           
+   
+    };
+
+      	for(var k=0; k< $('.form .size li').length; k++){
+
+          ( function(k){
+   	  
+          $('.form .size li ').eq(k).on('click',  function(event) {
+     	               event.preventDefault();
+
+                     var info = $(this).find('p').text();
+                
+  	                 $('.form .state span ').eq(1).css('display', 'inline').text(info);  
+  	                    console.log('文本替换' + info );
+          
+             }); 
+        })(k);
+
+        }
+
+
+
+
+      $(window).scroll(function(event) {
+    	/* Act on the event */
+    	  var distance=$(document).scrollTop();
+    	  var fix=$('.sideBarSettabArea').offset().top;
+          var currentId='';
+    	  if(distance>fix){
+    		$('.hideTitle').css('display', 'block');
+    	   }else{
+    		$('.hideTitle').css('display','none');
+    	  }
+    
+        
+           $('.sideBarSettabArea .item').each(function() {
+
+       	         var itemTop=$(this).offset().top;
+       	         if(distance>itemTop){
+
+       	         	currentId=$(this).attr('id');
+       	         }else{
+       	         	return false;
+       	         }
+
+       	        console.log("内容高度："+ itemTop); 
+         });
+         
+          console.log("当前高度："+ currentId); 
+
+          var curSelect=$('#ItemTag').find('.select');
+
+             if (currentId &&curSelect.attr('href')!=currentId) {
+                   curSelect.removeClass('select');
+                  $('#ItemTag').find('[href=#'+currentId+']').addClass('select');
+
+             };
+         
+    	   });
+
+});	
+   
+  	
+</script>
+</head>
+<body>
+  <div id="head" class="vanclHead">
+  	 <div id="headerTopArea" class="headerTopAreaBox">
+  	   <div class="headerTopArea">
+  	 	<div class="headerTop">
+  	 	  <div class="headerTopRight" style="width:126px;" >
+            <div class="active" id="vanclCustomer"><a class="mapDropTitle" href="//catalog.vancl.com/zhuanti/tg_20100510.html" target="_blank">网站公告</a></div>
+
+  	 	  	<div class="payattention">
+  	 	  	  <em></em>
+  	 	  	  <a href="javascript:void()0;" class="vweixinbox">
+  	 	  	    <span class="vweixin" style="background: url(vanimg/w1.jpg) no-repeat left 3px;"></span>
+  	 	  	    <b class="vweixinTip"></b>
+  	 	  	  </a>
+  	 	  	  <a href="//e.weibo.com/vancl" class="track vanclweibo" name="hp-hp-head-weibo-v:n" target="_blank" 
+  	 	  	       style="background: url(vanimg/w2.jpg) no-repeat left 3px;"></a>  
+  	 	  	</div>
+  	 	  </div>
+  	 	  <div class="headerTopLeft">
+  	 	     <div id ="welcome" class="top loginArea">
+  	 	      您好，
+  	 	      <span class="top">欢迎光临凡客诚品 &nbsp;</span>
+  	 	      <span>
+  	 	      	<a href="">登录</a>
+  	 	      	<a href="">注册</a>
+  	 	      </span>
+  	 	     </div>
+  	 	     <div class="recommendArea">
+  	 	        <a href="">我的订单</a>
+  	 	     	
+  	 	     </div>
+  	 	</div>
+  	 	<span class="blank0"></span>
+  	   </div>
+      </div>
+     </div>
+
+     <div id="logoArea" class="vanclLogoSearch">
+      <div class="vanclLogo fl">
+      	<h1>
+      		<a href="" name="hp-hp-head-logo-v:n" class="track">凡客</a>
+      	</h1>
+      </div>
+      <div class="vanclSearch fr">
+      	<div class="searchTab">
+      	  <div class="search fl">
+      	  	 <input type="text" class="Enter fl" name="k" id="skey" placeholder="搜T恤，体验与众不同">
+      	  	 <input type="button" class=" btn" id="btnHeaderSearch" onfocus="this.blur()">
+      	  </div>
+      	  <div class="buycar fr active" id="shoppingCarNone">
+      	  	<p>
+      	  	 <a href="" class="shopborder track cartab" id="shoppingcar_link" rel="nofollow">
+      	  	 	购物车
+      	  	 	<span car_product_total="shoppingCar_product_totalcount">0</span> )
+      	  	 </a>
+      	  	 <s></s>
+      	  	</p>
+      	  	<div class="bottomlines"></div>
+      	  	<div class="BuycarTab shopDropList">
+      	  	  <div class="shopnopru">
+      	  	     <div class="SCtotalpageno">您的购物车中没有任何商品<div class="SCtotalpageBottom"></div></div>
+      	  	       <div class="SCtotalpageBottom"></div>
+      	  	  </div>
+      	  	 
+      	  	</div>
+      	   </div>
+      	  </div>
+      	<div class="hotWord">
+      	  <p>
+      	  	"热门搜索："
+      	  	<a name="hp-hp-classhotsearch-1_1-v:n" class="track" href="//s.vancl.com/search?k=T%E6%81%A4&amp;orig=3" target="_blank">T恤</a>
+      	  	<a name="hp-hp-classhotsearch-1_2-v:n" class="track" href="//s.vancl.com/search?k=%E5%BC%A0%E7%88%B1%E7%8E%B2&amp;orig=3" target="_blank">雨声潺潺</a>
+      	  	<a name="hp-hp-classhotsearch-1_3-v:n" class="track" href="//s.vancl.com/search?k=%E7%A9%86%E6%97%A6&amp;orig=3" target="_blank">穆旦</a>
+      	  	<a name="hp-hp-classhotsearch-1_4-v:n" class="track" href="//s.vancl.com/search?k=%E9%A9%AC%E5%B0%94%E5%85%8B%E6%96%AF&amp;orig=3" target="_blank">只有上帝</a>
+      	  	<a name="hp-hp-classhotsearch-1_5-v:n" class="track" href="//s.vancl.com/search?k=%E5%B8%86%E5%B8%83%E9%9E%8B&amp;orig=3" target="_blank">帆布鞋</a>
+      	  	<a name="hp-hp-classhotsearch-1_6-v:n" class="track" href="//s.vancl.com/p1.html?k=%E8%A1%AC%E8%A1%AB" target="_blank">衬衫</a>
+      	  </p>
+       </div>	  
+      </div>
+     </div>
+
+    <div id="mainNavBox" class="vanclNav  vanclsubnav">
+      <div class="allProduct  fl">
+      	 <a href="">首页</a>
+      	 <span class="NavLine"></span>
+      </div>
+      <div id="V_Category">
+      	<div class="vanclNavList">
+      	   <ul class="fr">
+      	   	 <li class="item itempic"><a href="" class="track" name="hp-hp-head-nav_1-v:n">衬衫</a>
+      	   	    <span class="NavLine"></span>
+      	   	 </li>
+      	   	 	 <li class="item itempic"><a href="" class="track" name="hp-hp-head-nav_1-v:n">T恤</a>
+      	   	    <span class="NavLine"></span>
+      	   	 </li>	 <li class="item itempic"><a href="" class="track" name="hp-hp-head-nav_1-v:n">外套</a>
+      	   	    <span class="NavLine"></span>
+      	   	 </li>
+      	   	 	 <li class="item itempic"><a href="" class="track" name="hp-hp-head-nav_1-v:n">麻</a>
+      	   	    <span class="NavLine"></span>
+      	   	 </li>
+      	   	 	 <li class="item itempic"><a href="" class="track" name="hp-hp-head-nav_1-v:n">裤装</a>
+      	   	    <span class="NavLine"></span>
+      	   	 </li>
+      	   	 	 <li class="item itempic"><a href="" class="track" name="hp-hp-head-nav_1-v:n">鞋</a>
+      	   	    <span class="NavLine"></span>
+      	   	 </li>
+      	   	 	 <li class="item itempic"><a href="" class="track" name="hp-hp-head-nav_1-v:n">袜品</a>
+      	   	    <span class="NavLine"></span>
+      	   	 </li>
+      	   	 	 <li class="item itempic"><a href="" class="track" name="hp-hp-head-nav_1-v:n">Nautilus</a>
+      	   	    <span class="NavLine"></span>
+      	   	 </li>
+      	   	 	
+      	   </ul>
+       </div> 
+      </div>
+    </div>
+    </div>
+  <div class ="hideTitle">
+  	  	 	
+  	  <h2 title="凡客衬衫 吉国武 免烫 温莎领 2.0 黑色小方格">
+        凡客衬衫 吉国武 免烫 温莎领 2.0 黑色小方格</h2>
+      <ul class="ProductSubnav fr" id="ItemTag">
+             	<li>
+             		<a  href="#zhinan">购买指南</a>|
+             	</li>
+             	<li>
+             		<a href="#modol">模特</a>|
+             	</li>
+             	<li>
+             		<a href="#banXin">版型工艺</a>|
+             	</li>
+             	<li>
+             		<a href="#design">设计</a>|
+             	</li>
+             	<li>
+             		<a href="#wash">洗涤</a>|
+             	</li>
+             	
+             </ul>
+      <div class="AddtoCar fr">
+      <a href="#ProductTitleHide" class="cartab" id="hidCartab"></a>
+   
+     </div>       
+  </div>
+  <div class="danpinBox">
+    <a name="top"></a>
+    <span class="blank10"></span>
+    <div class="breadNav">
+    	<a href="">首页</a>
+    	<span>></span>
+    	<a href="">首页</a>
+    	<span>></span>
+    	<a href="">首页</a>
+    	<span>></span>
+    	<a href="">首页</a>
+    	<span>></span>
+        <input id="mainCategories" type="hidden" value="27531,27544,28806">
+    	<a href="">凡客衬衫 吉国武 免烫 温莎领 2.0</a>  	
+    </div>
+    <span class="blank0"></span>
+
+  	<div class="danpinArea">
+  	    <div id="ProductTitleShow" class="danpinTitleTab newclear">
+  	  	 <div id="producTitle">
+  	  	 	<div class= "brandNumArea">
+  	  	 		<span id="productcode">商品编号：6358709</span>
+  	  	 	</div>
+  	  	     <h2 title="凡客衬衫 吉国武 免烫 温莎领 2.0 黑色小方格">
+        凡客衬衫 吉国武 免烫 温莎领 2.0 黑色小方格</h2>
+             <ul class="ProductSubnav fr" id="ItemTag">
+             	<li >
+             		<a href="#zhinan">购买指南</a>|
+             	</li>
+             	<li>
+             		<a href="#modal">模特</a>|
+             	</li>
+             	<li>
+             		<a href="#banXin">版型工艺</a>|
+             	</li>
+             	<li>
+             		<a href="#design">设计细节</a>|
+             	</li>
+             	<li>
+             		<a href="#wash">洗涤保养</a>|
+             	</li>
+             	
+             </ul>
+  	  	 </div>
+  	    </div>
+  		<span class="blank30"></span>
+  		<div class="blank0"></div>
+
+  		<div class="danpin_colLef">
+  			<div class="danpinLeft">
+  				<div class="smallImg">
+  				
+  					<ul class="imageMenu">
+  						<li id="onlickImg" name="item-item-img-1" class="track">
+  							<span class="SpriteSmallImg" style="background-image:url(vanimg/0_left.jpg) ; background-position:0px -0px">&nbsp</span>
+  						</li>
+  						<li name="item-item-img-1" class="track">
+  							<span class="SpriteSmallImg" style="background-image:url(vanimg/0_left.jpg) ; background-position:0px -68px">&nbsp</span>
+  						</li>
+  				
+  					
+  						
+  					</ul>
+  					<div class="smallImgDown downHover"></div>
+  				</div>
+  			</div>
+            <div class="danpinColCenter">
+            	<div class="bigImg" id="vertical">
+            		<img src="vanimg/0_1small.jpg">
+            		<div id="winSelector" >
+                    </div>
+            	</div>
+            </div>
+  		</div>
+  		<div class="big_zoom"></div>
+  		<div id="danpinRight" class="danpinRight" class="danpinRight">
+            <div class="cuxiaoPrice">
+           	  	   <span class="tehuiMoney">
+           	  	 	<span>售价：</span>
+           	  	 	<span>￥ <strong>349.00</strong></span>
+           	  	   </span>
+           	  	   <a href="">点击充值</a>
+           	</div>
+            <div class="form">
+              <dl>
+                <dt>
+              	   颜色：
+              	</dt> 
+              	<dd class="color"> 
+              	  <ul>
+              	  	<li class="active" > <span class="img"></span><p>蓝色</p></li>
+              	    <li  > <span class="img"></span><p>粉红</p></li>
+              	   
+
+              	  </ul>
+              
+              	</dd>
+              	<dt>
+              		尺码：
+              	</dt> 
+              	<dd class="size">
+              	<ul> 
+                 <li><p>S</p></li>
+                 <li><p>M</p></li>
+                 <li><p>L</p></li>
+                 <li><p>XL</p></li>
+                 <li><p>XXL</p></li>
+                </ul>
+              	</dd>
+
+              	<dt>数量:</dt>
+              	<dd>
+              		<select> 
+              			<option>1</option>
+              			<option>2</option>
+              			<option>3</option>
+              			<option>4</option>
+              			<option>5</option>
+              			<option>6</option>
+              			<option>7</option>
+              			<option>8</option>
+              			<option>9</option>
+              			<option>10</option>
+              			
+
+              		</select>
+              	</dd>
+              	<dt>已选:</dt>
+              	<dd class="state"><span>蓝色条纹</span> <span style="display:none">S </span><span>现在有货</span></dd>
+              </dl>	
+            </div>
+
+  		    <div class="danpinfixedtitle">
+  		    <a class="button" href="">
+  		    	<span>点击购买</span>
+  		    </a>
+
+  		   	<a class="button" href="">
+  		    	<span>加入购物车</span>
+  		    </a>
+  		   	 
+  		    </div>
+  		 
+         
+  		</div>
+  	</div>
+  </div>
+ 
+  <div class="blank0"></div>
+  <div class="blank0" style="height:32px;"></div>
+  
+  <div class="sideBarSettabArea">
+    <div class="itemtagcontentpart">
+       <table align="center" border="0" cellpadding="0" cellspacing="0" id='zhinan' class="item">
+       	 <tbody>
+       	   <tr>
+       	   	  <td><img src="bigImg/01.jpg"></td>
+       	   </tr>
+       	 </tbody>
+       </table>
+        <table>
+       	 <tbody>
+       	   <tr>
+       	   	  <td><img src="bigImg/02.jpg"></td>
+       	   </tr>
+       	 </tbody>
+       </table>
+       <table align="center" border="0" cellpadding="0" cellspacing="0">
+       	 <tbody>
+       	   <tr>
+       	   	  <td><img src="bigImg/03.jpg"></td>
+       	   </tr>
+       	 </tbody>
+       </table>
+        <table>
+       	 <tbody>
+       	   <tr>
+       	   	  <td><img src="bigImg/04.jpg"></td>
+       	   </tr>
+       	 </tbody>
+       </table>
+       <table align="center" border="0" cellpadding="0" cellspacing="0">
+       	 <tbody>
+       	   <tr>
+       	   	  <td><img src="bigImg/05.jpg"></td>
+       	   </tr>
+       	 </tbody>
+       </table>
+        <table>
+       	 <tbody>
+       	   <tr>
+       	   	  <td><img src="bigImg/06.jpg"></td>
+       	   </tr>
+       	 </tbody>
+       </table>
+       <table align="center" border="0" cellpadding="0" cellspacing="0" id="modol" class="item">
+       	 <tbody>
+       	   <tr>
+       	   	  <td><img src="bigImg/07.jpg"></td>
+       	   </tr>
+       	 </tbody>
+       </table>
+        <table>
+       	 <tbody>
+       	   <tr>
+       	   	  <td><img src="bigImg/08.jpg"></td>
+       	   </tr>
+       	 </tbody>
+       </table>
+       <table align="center" border="0" cellpadding="0" cellspacing="0">
+       	 <tbody>
+       	   <tr>
+       	   	  <td><img src="bigImg/09.jpg"></td>
+       	   </tr>
+       	 </tbody>
+       </table>
+
+        <table align="center" border="0" cellpadding="0" cellspacing="0" id="banXin" class="item">
+       	 <tbody>
+       	   <tr>
+       	   	  <td><img src="bigImg/10.jpg"></td>
+       	   </tr>
+       	 </tbody>
+       </table>
+       <table align="center" border="0" cellpadding="0" cellspacing="0">
+       	 <tbody>
+       	   <tr>
+       	   	  <td><img src="bigImg/11.jpg"></td>
+       	   </tr>
+       	 </tbody>
+       </table>
+        <table>
+       	 <tbody>
+       	   <tr>
+       	   	  <td><img src="bigImg/12.jpg"></td>
+       	   </tr>
+       	 </tbody>
+       </table>
+       <table align="center" border="0" cellpadding="0" cellspacing="0">
+       	 <tbody>
+       	   <tr>
+       	   	  <td><img src="bigImg/13.jpg"></td>
+       	   </tr>
+       	 </tbody>
+       </table>
+        <table>
+       	 <tbody>
+       	   <tr>
+       	   	  <td><img src="bigImg/14.jpg"></td>
+       	   </tr>
+       	 </tbody>
+       </table>
+        
+        <table align="center" border="0" cellpadding="0" cellspacing="0" id="design" class="item">
+       	 <tbody>
+       	   <tr>
+       	   	  <td><img src="bigImg/15.jpg"></td>
+       	   </tr>
+       	 </tbody>
+       </table>
+        <table>
+       	 <tbody>
+       	   <tr>
+       	   	  <td><img src="bigImg/16.jpg"></td>
+       	   </tr>
+       	 </tbody>
+       </table>
+       <table align="center" border="0" cellpadding="0" cellspacing="0">
+       	 <tbody>
+       	   <tr>
+       	   	  <td><img src="bigImg/17.jpg"></td>
+       	   </tr>
+       	 </tbody>
+       </table>
+
+        <table align="center" border="0" cellpadding="0" cellspacing="0" id="wash" class="item">
+       	 <tbody>
+       	   <tr>
+       	   	  <td><img src="bigImg/18.jpg"></td>
+       	   </tr>
+       	 </tbody>
+       </table>
+    </div>
+    <div class="productPinglun ">
+       <div class="titlePro">
+       	 <div><h3 style="font-weight:bolder">产品属性：（点击属性可查看同类商品）</h3></div>
+         <div class="titleDown" style="background-color:#eee"><span>风格：</span><a>商务</a></div>
+       </div>
+       <div>
+    	 <div class="leftPro">
+    	    <h2 class="hotTitle" style="position: static; top: 0px; left: 0px; height: 40px;
+                                    line-height: 40px; padding: 0px 0px 0px 25px; border-bottom: 1px solid #b4b4b4;">
+                                    推荐产品</h2>
+    	 	<ul>
+    	 		<li><a href=""><img src="vanimg/t.jpg"> </a>
+    	 		    <h3><a href="">凡客休闲裤 松紧腰短裤 男款 深海蓝</a></h3>
+    	 			<p><em>售价￥168</em></p>
+    	 		</li>
+    	 		<li><a href=""><img src=""> </a>
+    	 		    <h3><a href<li><a href=""><img src="vanimg/small.jpg"> </a>
+    	 		    <h3><a href="">凡客休闲裤 松紧腰短裤 男款 深海蓝</a></h3>
+    	 			<p><em>售价￥168</em></p>
+    	 		</li>
+    	 	
+    	 	  
+    	 	  <li><a href=""><img src="vanimg/t.jpg"> </a>
+    	 		    <h3><a href="">凡客休闲裤 松紧腰短裤 男款 深海蓝</a></h3>
+    	 			<p><em>售价￥168</em></p>
+    	 		</li>
+    	 
+    	 	  
+    	 	  
+    	 		
+    	 	</ul>
+    	 </div> 
+
+    	 <div class="rightPro">
+
+    	 	<div class="comments">
+    	 		<div class="titleComments">
+    	 			  <ul>
+                        <li><p style="font-weight:bolder">最新评论（<span>10</span>）</p></li>
+                        <li><input type="radio" name="choose">
+                            <label>全部评论</label>
+                        </li>
+                        <li><input type="radio" name="choose">
+                            <label>图片</label></li>
+                        <li><a href=""><span style="line-height: 25px;">我要评论</span></a></li>
+    	 		    </ul>
+    	 		</div>
+    	 		<div class="contentComments">
+    	 		 <div class="leftComments">
+    	 			<ul class="ul">
+    	 				<li><p>东西很好</p></li>
+    	 				<li><p>2016-09-25</p></li>
+    	 			</ul>
+    	 			
+    	 			<ul class="ur">
+    	 				<li><span>颜色：蓝底细白条纹</span></li>
+    	 				<li><span>尺码：M</span></li>
+    	 				<li><span>身高:0cm</span></li>
+    	 				<li><span>体重0.0kg</span></li>
+    	 				<li><span><尺码合适></span></li>	
+    	 			</ul>
+    	 		</div>
+    	 		<div class="rightComments">
+    	 			<p>kanse***</p>
+    	 			<p><img src=""></p>
+    	 		</div>
+    	 		</div>
+
+    	 		<div class="contentComments">
+    	 		 <div class="leftComments">
+    	 			<ul class="ul">
+    	 				<li><p>东西很好</p></li>
+    	 				<li><p>2016-09-25</p></li>
+    	 			</ul>
+    	 			
+    	 			<ul class="ur">
+    	 				<li><span>颜色：蓝底细白条纹</span></li>
+    	 				<li><span>尺码：M</span></li>
+    	 				<li><span>身高:0cm</span></li>
+    	 				<li><span>体重0.0kg</span></li>
+    	 				<li><span><尺码合适></span></li>	
+    	 			</ul>
+    	 		</div>
+    	 		<div class="rightComments">
+    	 			<p>kanse***</p>
+    	 			<p><img src=""></p>
+    	 		</div>
+    	 		</div>
+
+    	 				
+
+    	 	</div>
+
+    	 	<div class="question">
+    	 		<div class="titleQuestion">
+    	 		    <ul>
+                        <li><p style="font-weight:bolder">最新提问（共<span>27</span>条）</p></li>
+                        <li><a href=""><span style="line-height: 25px;">我要提问</span></a></li>
+    	 		    </ul>
+    	 			
+    	 			
+    	 		</div>
+    	 		<div>
+    	 			<div class="Q">
+    	 			  <p><span><img src=""></span>185***:  </p>
+    	 			  <p>这个和2.0版比起来 下摆围尺寸数据有吗</p>
+
+    	 			  <p><span>2016-09-24</span><span>我要回复（0）</span> </p>
+    	 			</div>
+    	 			<div class="A">
+    	 				<span><img src=""></span>
+    	 			   <p>亲爱的客户您好，经查询，您咨询的内容暂无相关信息，请您后续关注网页更新，如您已订购成功，请以收到的实物为准，给您带来的不便请您谅解，感谢您的支持！祝您购物愉快！O(∩_∩)O</p>
+    	 			</div>
+    	 		</div>
+    	 	</div>
+
+    	 </div>
+       </div>
+    </div>  
+
+    	
+    </div>
+
+  </div>
+
+  <div class="vanclFoot" style="margin-top:0px;">
+  	<div class="vanclCustomer publicfooterclear">
+  	  <ul>
+
+  	  	<li>
+  	  	  <a href="" target="_blank"></a>
+  	  	   <p class="onlineCustomer">
+  	  	    <img src="vanimg/online.png" style="width:auto; height:auto; ">
+  	  	   </p>
+  	  	   <p class="onlineTime">7x9小时在线客服
+  	  	   </p>
+  	  	</li>
+
+  	  	<li>
+  	  	  <a href="" target="_blank"></a>
+  	  	   <p class="seven">
+  	  	    <img src="vanimg/seven.png" style="width:auto; height:auto; ">
+  	  	   </p>
+  	  	   <p >7天内退货</p>
+  	  	   <p > 购物满199元免运费</p>
+  	  	   
+  	  	</li>
+
+  	     <li class="twocode">
+  	  	  <a href="" target="_blank"></a>
+  	  	   <p class="seven">
+  	  	    <img src="vanimg/weixin.png" style="width:105px; height:105px; ">
+  	  	   </p>
+  	  	   <p >扫描下载<em>凡客</em>客户端</p>
+  	  		  	   
+  	  	</li>
+  	  </ul>
+  	</div>
+
+  	<div class="vanclOthers publicfooterclear">
+  		<ul>
+  			<li><a href="">关于凡客</a></li>
+  			<li><a href="">新手指南</a></li>
+  			<li><a href="">配送范围及时间</a></li>
+  			<li><a href="">支付方式</a></li>
+  			<li><a href="">售后服务</a></li>
+  			<li><a href="">帮助中心</a></li>
+  		</ul>
+  	</div>
+
+  </div> 
+ <div id="footerArea" class="">
+   <div class="footBottom">
+   	  <div class="footBottomTab">
+   	  	<p>
+   	  	 Copyright 2007 - 2016 vancl.com All Rights Reserved 京ICP证100557号 京公网安备11011502002400号 出版物经营许可证新出发京批字第直110138号
+   	  	</p>
+   	  	<p> 凡客诚品（北京）科技有限公司</p>
+   	  </div>
+
+   </div>
+   
+   <div class="subFooter">
+    
+   	 <a rel="nofollow" href="https://search.szfw.org/cert/l/CX20111229001302001330" class="redLogo" target="_blank"></a>
+   	 <span class="costumeOrg"></span>
+   	 <a rel="nofollow" href="//www.315online.com.cn/member/315090053.html" class="wsjyBzzx" target="_blank"></a>
+   	 <a rel="nofollow" href="//www.hd315.gov.cn/beian/view.asp?bianhao=010202010081900017" class="vanclMsg" target="_blank"></a>
+   	 <a class="vanclqingNian" target="_blank" href="//www.vancl.com/help/about_2.htm" rel="nofollow"></a>
+  
+   </div>
+ 	
+ </div>
+</body>
+</html>
